@@ -11,6 +11,6 @@ export class TodoService {
   ) { }
 
   getTodos() {
-    return this.api.get('/tasks/1')
+    return this.api.get('/tasks')
   }
 }

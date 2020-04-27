@@ -1,16 +1,13 @@
 
-<header class="app-header">
-  <div class="container">
-    <a href='#' class="logo">ToDo App</a>
-    <nav>
-      <ul>
-        <li><a href="#" routerLink="/">Home</a></li>
-        <li><a href="#" routerLink="/todos">ToDos</a></li>
-      </ul>
-    </nav>
+<nav class="todo-main-header">
+  <div class="nav-wrapper">
+    <a href="#" routerLink="/" class="brand-logo">TODO App</a>
+    <ul id="nav-mobile" class="right hide-on-small-and-down">
+      <li><a href="#" routerLink="/">Home</a></li>
+      <li><a href="#" routerLink="/todos">ToDos</a></li>
+      <li><a href="#" routerLink="/sign-in">Login</a></li>
+      <li><a href="#" routerLink="/sign-up">Sign Up</a></li>
+    </ul>
   </div>
-</header>
-
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+</nav>
+<router-outlet></router-outlet>
