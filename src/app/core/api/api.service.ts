@@ -14,6 +14,11 @@ export class ApiService {
   public get(path) {
 		var endpoint = this.API_URL + path;
 		return this.http.get(endpoint);
+  }
+
+  public post(path, formData: FormData) {
+		var endpoint = this.API_URL + path;
+		return this.http.post(endpoint, formData);
 	}
 
 }

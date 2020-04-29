@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoComponent } from '@modules/todo/todo.component';
 import { SignInComponent } from '@modules/sign-in/sign-in.component';
-import { SignUpComponent } from '@modules/sign-up/sign-up.component';
+import { SignUpModule } from '@modules/sign-up/sign-up.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    SignInComponent,
-    SignUpComponent
+    SignInComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SignUpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

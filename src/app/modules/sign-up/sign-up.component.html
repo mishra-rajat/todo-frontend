@@ -1,38 +1,38 @@
 <div class="row mt-med">
-  <form class="col xl4 l6 m8 s12 offset-xl4 offset-l3 offset-m2" onsubmit="this.createAccount()">
+  <form class="col xl4 l6 m8 s12 offset-xl4 offset-l3 offset-m2" (ngSubmit)="createAccount()" [formGroup]="signUpForm">
     <div class="row">
       <div class="input-field col s12">
-        <input id="first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
+        <input matInput required id="firstName" type="text" class="validate" maxlength="{{maxLength.firstName}}" formControlName="firstName">
+        <label for="firstName">First Name</label>
       </div>
       <div class="input-field col s12">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
+        <input matInput id="lastName" type="text" class="validate" maxlength="{{maxLength.lastName}}" formControlName="lastName">
+        <label for="lastName">Last Name</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
+        <input matInput id="email" type="email" class="validate" formControlName="email">
         <label for="email">Email</label>
       </div>
       <div class="input-field col s12">
-        <input id="phone_no" type="text" class="validate">
-        <label for="phone_no">Phone Number</label>
+        <input matInput id="phoneNumber" type="text" class="validate" formControlName="phoneNumber">
+        <label for="phoneNumber">Phone Number</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
+        <input matInput id="password" type="password" class="validate" formControlName="password">
         <label for="password">Password</label>
       </div>
       <div class="input-field col s12">
-        <input id="confirm_password" type="password" class="validate">
-        <label for="confirm_password">Confirm Password</label>
+        <input matInput id="confirmPassword" type="password" class="validate" formControlName="confirmPassword">
+        <label for="confirmPassword">Confirm Password</label>
       </div>
     </div>
     <div class="row mt-med">
       <div class="col s12 center-align">
-        <input type="submit" value="Create Account" class="waves-effect waves-light btn red lighten-1">
+        <input matInput type="submit" value="Create Account" class="waves-effect waves-light btn red lighten-1">
       </div>
     </div>
   </form>
